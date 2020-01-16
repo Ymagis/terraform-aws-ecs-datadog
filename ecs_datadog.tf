@@ -12,7 +12,7 @@ resource "aws_ecs_task_definition" "datadog" {
     "environment": [{
       "name" : "DD_API_KEY",
       "value" : "${var.datadog-api-key}"
-    }
+    },
     {
       "name" : "DD_APM_ENABLED",
       "value" : "${var.datadog-apm}"
