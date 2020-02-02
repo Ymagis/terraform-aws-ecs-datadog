@@ -19,15 +19,15 @@ resource "aws_ecs_task_definition" "datadog" {
     },
     {
       "name" : "DD_LOGS_CONFIG_CONTAINER_COLLECT_ALL",
-      "value" : "${var.dd-logs-config-containers}"
+      "value" : "true"
     },
     {
       "name" : "DD_LOGS_ENABLED",
-      "value" : "${var.dd-logs-enable}"
+      "value" : "true"
     },
     {
       "name" : "DD_AC_EXCLUDE",
-      "value" : "${var.dd-ac-exlude}"
+      "value" : "name:dd-agent"
     }
     ],
     "command": [
