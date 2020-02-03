@@ -13,7 +13,7 @@ resource "aws_ecs_task_definition" "datadog" {
             "containerPort": 8126,
             "protocol": "tcp",
             "hostPort": 8126
-    }]
+    }],
     "environment": [{
       "name" : "DD_API_KEY",
       "value" : "${var.datadog-api-key}"
@@ -24,7 +24,7 @@ resource "aws_ecs_task_definition" "datadog" {
     },
     {
       "name" : "DD_APM_NON_LOCAL_TRAFFIC",
-      "value" : "${var.dd-apm-non-local-traffic}
+      "value" : "${var.dd-apm-non-local-traffic}"
     }
     ],
     "command": [
