@@ -16,18 +16,6 @@ resource "aws_ecs_task_definition" "datadog" {
     {
       "name" : "DD_APM_ENABLED",
       "value" : "${var.datadog-apm}"
-    },
-    {
-      "name" : "DD_LOGS_CONFIG_CONTAINER_COLLECT_ALL",
-      "value" : "${var.dd-logs-config-containers}"
-    },
-    {
-      "name" : "DD_LOGS_ENABLED",
-      "value" : "${var.dd-logs-enable}"
-    },
-    {
-      "name" : "DD_AC_EXCLUDE",
-      "value" : "${var.dd-ac-exlude}"
     }
     ],
     "command": [
