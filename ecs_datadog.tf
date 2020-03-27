@@ -70,5 +70,6 @@ resource "aws_ecs_service" "datadog" {
   cluster         = "${var.ecs-cluster-id}"
   task_definition = "${aws_ecs_task_definition.datadog.arn}"
 
-  #scheduling_strategy = "DAEMON"  #To be run as REPLICA , REPLICA is the default value
+  scheduling_strategy = "${var.scheduling-strategy}"  #To be run as REPLICA in test environment only  
 }
+
